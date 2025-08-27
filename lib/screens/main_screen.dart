@@ -5,6 +5,6 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Expanded(child: ListView()));
+    return SafeArea(child: ListView());
   }
 }
