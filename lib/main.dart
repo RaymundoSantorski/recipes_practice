@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:recipes_practice/screens/main_screen.dart';
+import 'package:recipes_practice/services/recipe_service.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  RecipeService.init();
   runApp(const MyApp());
 }
 

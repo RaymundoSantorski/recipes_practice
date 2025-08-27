@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Papa",
+        "image": "assets/images/alksjd.png",
+        "ingredients": [
+            "papa",
+            "cebolla"
+        ], 
+        "steps": [
+            "Picar la cebolla"
+        ]
+    }
+]
