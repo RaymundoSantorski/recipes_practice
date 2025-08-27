@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_practice/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         backgroundColor: appBarTheme.backgroundColor,
       ),
+      body: MainScreen(),
     );
   }
 }
