@@ -1,45 +1,21 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-
-class Recipe {
-  final String title;
-  final String image;
-  final List ingredients;
-  final List steps;
-
-  Recipe({
-    required this.title,
-    required this.image,
-    required this.ingredients,
-    required this.steps,
-  });
-
-  factory Recipe.fromJson(Map<String, dynamic> json) {
-    return Recipe(
-      title: json['title'] as String,
-      image: json['image'] as String,
-      ingredients: json['ingredients'] as List,
-      steps: json['steps'] as List,
-    );
-  }
-
-  Map<String, dynamic> toJson() => {
-    'title': title,
-    'image': image,
-    'ingredients': ingredients,
-    'steps': steps,
-  };
-}
+import 'package:recipes_practice/models/recipe_model.dart';
 
 class RecipeService {
-  static Future<void> init() async {
-    dynamic data = loadJsonFromAssets('assets/recipes.json');
-  }
+  static late List<Recipe> recipes;
 
-  static Future<Map<String, dynamic>> loadJsonFromAssets(
-    String filePath,
-  ) async {
-    String jsonString = await rootBundle.loadString(filePath);
-    return jsonDecode(jsonString);
+  static Future<void> init() async {
+    try {
+      final String response = await rootBundle.loadString(
+        'assets/recipes.json',
+      );
+      List<dynamic> data = await json.decode(response);
+      recipes = data.map((phrase) => Recipe.fromJson(phrase)).toList();
+      print(data);
+    } catch (error) {
+      recipes = [];
+      print('No se pudieron cargar las frases');
+    }
   }
 }
