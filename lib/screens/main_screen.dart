@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_practice/models/recipe_model.dart';
+import 'package:recipes_practice/services/recipe_service.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: ListView());
+    List<Recipe> recipes = RecipeService.recipes;
+    return SafeArea(
+      child: ListView.builder(
+        itemCount: recipes.length,
+        itemBuilder: (context, index) => Text(recipes[index].title),
+      ),
+    );
   }
 }
