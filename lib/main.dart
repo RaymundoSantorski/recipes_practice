@@ -4,7 +4,7 @@ import 'package:recipes_practice/services/recipe_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // RecipeService.init();
+  RecipeService.init();
   runApp(const MyApp());
 }
 
