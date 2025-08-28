@@ -1,14 +1,205 @@
 [
     {
         "id": 1,
-        "title": "Papa",
-        "image": "assets/images/alksjd.png",
+        "title": "Tacos de carnitas",
+        "image": "01_tacos_de_carnitas.jpeg",
         "ingredients": [
-            "papa",
-            "cebolla"
-        ], 
+            "carne de cerdo",
+            "cebolla",
+            "naranja",
+            "sal",
+            "tortillas de maíz"
+        ],
         "steps": [
-            "Picar la cebolla"
+            "Cortar la carne en trozos",
+            "Freír la carne con sal y naranja",
+            "Servir la carne en tortillas de maíz con cilantro y cebolla"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Guacamole",
+        "image": "02_guacamole.avif",
+        "ingredients": [
+            "aguacate",
+            "cebolla",
+            "cilantro",
+            "chile serrano",
+            "jitomate",
+            "jugo de limón",
+            "sal"
+        ],
+        "steps": [
+            "Machacar el aguacate en un tazón",
+            "Picar finamente la cebolla, el cilantro, el chile y el jitomate",
+            "Mezclar todo con el jugo de limón y la sal"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Mole poblano",
+        "image": "03_mole_poblano.jpg",
+        "ingredients": [
+            "chile ancho",
+            "chile mulato",
+            "chile pasilla",
+            "chocolate amargo",
+            "almendras",
+            "cacahuates",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "especias"
+        ],
+        "steps": [
+            "Tostar los chiles y las especias",
+            "Licuar todos los ingredientes hasta obtener una pasta",
+            "Cocer la pasta con caldo de pollo y el chocolate",
+            "Servir con pollo o pavo"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Enchiladas suizas",
+        "image": "04_enchiladas_suizas.jpg",
+        "ingredients": [
+            "tortillas de maíz",
+            "pollo deshebrado",
+            "crema",
+            "queso",
+            "chile poblano",
+            "ajo",
+            "cebolla"
+        ],
+        "steps": [
+            "Freír las tortillas ligeramente",
+            "Rellenar las tortillas con pollo",
+            "Licuar los chiles poblanos con ajo, cebolla y crema",
+            "Bañar las enchiladas con la salsa y gratinar con queso"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Ceviche de pescado",
+        "image": "05_ceviche_de_pescado.jpeg",
+        "ingredients": [
+            "pescado blanco",
+            "limón",
+            "cebolla morada",
+            "cilantro",
+            "jitomate",
+            "aguacate",
+            "sal"
+        ],
+        "steps": [
+            "Cortar el pescado en cubos pequeños",
+            "Marinar el pescado en jugo de limón por 20 minutos",
+            "Agregar la cebolla, cilantro, jitomate y aguacate picados",
+            "Sazonar con sal"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Chiles rellenos",
+        "image": "06_chiles_rellenos.jpeg",
+        "ingredients": [
+            "chile poblano",
+            "carne molida de res",
+            "queso",
+            "jitomate",
+            "cebolla",
+            "huevo",
+            "harina",
+            "aceite"
+        ],
+        "steps": [
+            "Tatemar los chiles y pelarlos",
+            "Rellenar los chiles con carne y queso",
+            "Capear los chiles con huevo y harina",
+            "Freír en aceite caliente"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Sopa de tortilla",
+        "image": "07_sopa_de_tortilla.jpeg",
+        "ingredients": [
+            "tortillas de maíz",
+            "chile pasilla",
+            "jitomate",
+            "ajo",
+            "cebolla",
+            "crema",
+            "queso",
+            "aguacate"
+        ],
+        "steps": [
+            "Freír las tortillas hasta que estén crujientes",
+            "Licuar el jitomate, chile, ajo y cebolla para la sopa",
+            "Hervir la mezcla y sazonar",
+            "Servir la sopa con trozos de tortilla, aguacate, queso y crema"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Pozole rojo",
+        "image": "08_pozole_rojo.jpg",
+        "ingredients": [
+            "maíz pozolero",
+            "carne de cerdo",
+            "chile guajillo",
+            "ajo",
+            "cebolla",
+            "orégano",
+            "rábanos",
+            "lechuga",
+            "limón"
+        ],
+        "steps": [
+            "Cocer el maíz con la carne de cerdo",
+            "Hervir los chiles guajillos y licuarlos con ajo y cebolla",
+            "Colar la salsa de chile y agregarla a la olla del pozole",
+            "Servir con rábanos, lechuga y limón"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Tostadas de tinga de pollo",
+        "image": "09_tostadas_de_tinga_de_pollo.jpg",
+        "ingredients": [
+            "pollo deshebrado",
+            "cebolla",
+            "jitomate",
+            "chile chipotle",
+            "tostadas",
+            "aguacate",
+            "queso fresco",
+            "crema"
+        ],
+        "steps": [
+            "Guisar el pollo con cebolla, jitomate y chipotle",
+            "Servir sobre tostadas",
+            "Adornar con aguacate, queso y crema"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Arroz a la mexicana",
+        "image": "10_arroz_a_la_mexicana.jpg",
+        "ingredients": [
+            "arroz blanco",
+            "jitomate",
+            "cebolla",
+            "ajo",
+            "zanahoria",
+            "chícharos",
+            "caldo de pollo"
+        ],
+        "steps": [
+            "Freír el arroz hasta que dore",
+            "Licuar el jitomate, cebolla y ajo",
+            "Agregar el líquido al arroz con las verduras",
+            "Cocer a fuego bajo hasta que el arroz absorba todo el líquido"
         ]
     }
 ]

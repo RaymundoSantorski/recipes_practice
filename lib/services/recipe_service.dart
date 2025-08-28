@@ -12,10 +12,9 @@ class RecipeService {
       );
       List<dynamic> data = await json.decode(response);
       recipes = data.map((phrase) => Recipe.fromJson(phrase)).toList();
-      print(data);
-    } catch (error) {
+    } catch (err) {
+      print(err);
       recipes = [];
-      print('No se pudieron cargar las frases');
     }
   }
 }
