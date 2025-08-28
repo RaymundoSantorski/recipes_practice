@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Recipe> recipes = RecipeService.recipes;
     return SafeArea(
-      child: recipes.length > 0
+      child: recipes.isNotEmpty
           ? ListView.builder(
               itemCount: recipes.length,
               itemBuilder: (context, index) =>
