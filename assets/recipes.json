@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Tacos de carnitas",
+        "image": "01_tacos_de_carnitas.jpeg",
         "ingredients": [
             "carne de cerdo",
             "cebolla",
@@ -18,6 +19,7 @@
     {
         "id": 2,
         "title": "Guacamole",
+        "image": "02_guacamole.avif",
         "ingredients": [
             "aguacate",
             "cebolla",
@@ -36,6 +38,7 @@
     {
         "id": 3,
         "title": "Mole poblano",
+        "image": "03_mole_poblano.jpg",
         "ingredients": [
             "chile ancho",
             "chile mulato",
@@ -58,6 +61,7 @@
     {
         "id": 4,
         "title": "Enchiladas suizas",
+        "image": "04_enchiladas_suizas.jpg",
         "ingredients": [
             "tortillas de maíz",
             "pollo deshebrado",
@@ -77,6 +81,7 @@
     {
         "id": 5,
         "title": "Ceviche de pescado",
+        "image": "05_ceviche_de_pescado.jpeg",
         "ingredients": [
             "pescado blanco",
             "limón",
@@ -96,6 +101,7 @@
     {
         "id": 6,
         "title": "Chiles rellenos",
+        "image": "06_chiles_rellenos.jpeg",
         "ingredients": [
             "chile poblano",
             "carne molida de res",
@@ -116,6 +122,7 @@
     {
         "id": 7,
         "title": "Sopa de tortilla",
+        "image": "07_sopa_de_tortilla.jpeg",
         "ingredients": [
             "tortillas de maíz",
             "chile pasilla",
@@ -136,6 +143,7 @@
     {
         "id": 8,
         "title": "Pozole rojo",
+        "image": "08_pozole_rojo.jpg",
         "ingredients": [
             "maíz pozolero",
             "carne de cerdo",
@@ -157,6 +165,7 @@
     {
         "id": 9,
         "title": "Tostadas de tinga de pollo",
+        "image": "09_tostadas_de_tinga_de_pollo.jpg",
         "ingredients": [
             "pollo deshebrado",
             "cebolla",
@@ -176,6 +185,7 @@
     {
         "id": 10,
         "title": "Arroz a la mexicana",
+        "image": "10_arroz_a_la_mexicana.jpg",
         "ingredients": [
             "arroz blanco",
             "jitomate",
