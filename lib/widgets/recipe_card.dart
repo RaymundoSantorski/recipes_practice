@@ -19,7 +19,7 @@ class RecipeCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 12.0),
           child: Row(
             children: [
-              Image.asset('assets/${recipe.image}', width: 50, height: 50),
+              Image.asset('assets/${recipe.image}', width: 60, height: 60),
               SizedBox(width: 40),
               Text(recipe.title),
             ],
