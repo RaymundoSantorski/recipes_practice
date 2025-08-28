@@ -14,7 +14,18 @@ class RecipeCard extends StatelessWidget {
           MaterialPageRoute(builder: (BuildContext context) => RecipeScreen()),
         );
       },
-      child: Card(child: Row(children: [Text(recipe.title)])),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 12.0),
+          child: Row(
+            children: [
+              Image.asset('assets/${recipe.image}', width: 50, height: 50),
+              SizedBox(width: 40),
+              Text(recipe.title),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
