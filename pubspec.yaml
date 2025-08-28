@@ -60,6 +60,16 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/recipes.json
+    - assets/01_tacos_de_carnitas.jpeg
+    - assets/02_guacamole.avif
+    - assets/03_mole_poblano.jpg
+    - assets/04_enchiladas_suizas.jpg
+    - assets/05_ceviche_de_pescado.jpeg
+    - assets/06_chiles_rellenos.jpeg
+    - assets/07_sopa_de_tortilla.jpeg
+    - assets/08_pozole_rojo.jpg
+    - assets/09_tostadas_de_tinga_de_pollo.jpg
+    - assets/10_arroz_a_la_mexicana.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
