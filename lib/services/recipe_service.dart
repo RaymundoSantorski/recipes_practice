@@ -1,32 +1,25 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:recipes_practice/models/recipe_model.dart';
-
-class RecipeError {
-  String title;
-  RecipeError(this.title);
-}
+import 'package:recipes_practice/widgets/warning.dart';
 
 class RecipeService {
-  static late List<Recipe> recipes;
-  static RecipeError? error;
+  static List<Recipe> recipes = [];
 
-  static setError(RecipeError? err) {
-    error = err;
-  }
-
-  static Future<void> init() async {
+  static Future<void> init(BuildContext context) async {
     try {
       final String response = await rootBundle.loadString(
         'assets/recipes.json',
       );
       List<dynamic> data = await json.decode(response);
       recipes = data.map((phrase) => Recipe.fromJson(phrase)).toList();
-      setError(null);
       print(data);
     } catch (err) {
       recipes = [];
-      setError(RecipeError('No se pudieron cargar las recetas'));
+      ScaffoldMessenger.of(context).showSnackBar(
+        snackBar('No se pudieron cargar las recetas', Colors.redAccent),
+      );
     }
   }
 }
