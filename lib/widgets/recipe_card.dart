@@ -11,7 +11,9 @@ class RecipeCard extends StatelessWidget {
     return TextButton(
       onPressed: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (BuildContext context) => RecipeScreen()),
+          MaterialPageRoute(
+            builder: (BuildContext context) => RecipeScreen(recipe: recipe),
+          ),
         );
       },
       child: Card(
