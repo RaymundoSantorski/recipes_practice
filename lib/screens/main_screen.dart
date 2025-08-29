@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:recipes_practice/models/recipe_model.dart';
 import 'package:recipes_practice/services/recipe_service.dart';
 import 'package:recipes_practice/widgets/no_recipes.dart';
@@ -9,7 +10,7 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Recipe> recipes = RecipeService.recipes;
+    List<Recipe> recipes = Provider.of<RecipeService>(context).recipes;
     return SafeArea(
       child: recipes.isNotEmpty
           ? ListView.builder(
