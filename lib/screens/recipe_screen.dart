@@ -26,6 +26,7 @@ class RecipeScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
             ),
+            SizedBox(height: 40),
             Text('Ingredientes:'),
             for (String ingredient in recipe.ingredients)
               Text('* $ingredient', textAlign: TextAlign.center),
