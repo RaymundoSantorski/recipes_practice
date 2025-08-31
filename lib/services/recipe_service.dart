@@ -3,31 +3,55 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:recipes_practice/models/recipe_model.dart';
 
-class RecipeService extends ChangeNotifier {
-  late List<Recipe> recipes;
+class RecipeService extends StatefulWidget {
+  const RecipeService({super.key});
+  @override
+  State<RecipeService> createState() => RecipeServiceState();
+}
 
-  Future<void> init() async {
+class RecipeServiceState<T extends RecipeService> extends State<T> {
+  late List<Recipe> fullRecipes = [];
+  late List<Recipe> recipes = [];
+  TextEditingController controller = TextEditingController(text: '');
+
+  @override
+  void initState() {
+    super.initState();
+    getRecipes();
+  }
+
+  void filterRecipes(String value) {
+    setState(() {
+      recipes = fullRecipes
+          .where(
+            (Recipe recipe) =>
+                recipe.title.toLowerCase().contains(value.toLowerCase()),
+          )
+          .toList();
+    });
+  }
+
+  Future<void> getRecipes() async {
     try {
       final String response = await rootBundle.loadString(
         'assets/recipes.json',
       );
       List<dynamic> data = await json.decode(response);
-      recipes = data.map((phrase) => Recipe.fromJson(phrase)).toList();
+      setState(() {
+        fullRecipes = data.map((phrase) => Recipe.fromJson(phrase)).toList();
+        recipes = fullRecipes;
+      });
     } catch (err) {
       print(err);
-      recipes = [];
+      setState(() {
+        fullRecipes = [];
+        recipes = fullRecipes;
+      });
     }
   }
 
-  Future<void> searchBy(String param) async {
-    if (param.isEmpty) {
-      await init();
-    } else {
-      List<Recipe> recipesFiltered = recipes
-          .where((recipe) => recipe.title.contains(param))
-          .toList();
-      recipes = recipesFiltered;
-      notifyListeners();
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
