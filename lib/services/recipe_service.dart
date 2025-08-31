@@ -13,11 +13,18 @@ class RecipeServiceState<T extends RecipeService> extends State<T> {
   late List<Recipe> fullRecipes = [];
   late List<Recipe> recipes = [];
   TextEditingController controller = TextEditingController(text: '');
+  bool grid = true;
 
   @override
   void initState() {
     super.initState();
     getRecipes();
+  }
+
+  void toggleGrid() {
+    setState(() {
+      grid = !grid;
+    });
   }
 
   void filterRecipes(String value) {
