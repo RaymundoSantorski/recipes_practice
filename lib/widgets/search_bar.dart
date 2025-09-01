@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Search bar that uses the [filterRecipes] method in the [RecipeService] to filter the recipe results
 class MySearchBar extends StatelessWidget {
   const MySearchBar({
     super.key,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:recipes_practice/models/recipe_model.dart';
 import 'package:recipes_practice/services/recipe_service.dart';
 import 'package:recipes_practice/widgets/no_recipes.dart';
 import 'package:recipes_practice/widgets/recipe_card.dart';
 import 'package:recipes_practice/widgets/recipes_grid.dart';
 import 'package:recipes_practice/widgets/search_bar.dart';
 
+/// Main screen state class
 class MainScreen extends RecipeService {
   const MainScreen({super.key, required this.title});
   final String title;
@@ -13,6 +13,7 @@ class MainScreen extends RecipeService {
   State<RecipeService> createState() => _MainScreenState();
 }
 
+/// Main screen logic, inherits from recipe service
 class _MainScreenState extends RecipeServiceState<MainScreen> {
   @override
   Widget build(BuildContext context) {

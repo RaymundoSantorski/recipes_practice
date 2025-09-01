@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipes_practice/models/recipe_model.dart';
 
+/// Recipe screen, shows the details of a single recipe at a time, requires a Recipe object to work
 class RecipeScreen extends StatelessWidget {
   const RecipeScreen({super.key, required this.recipe});
   final Recipe recipe;

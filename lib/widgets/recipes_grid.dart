@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipes_practice/models/recipe_model.dart';
 import 'package:recipes_practice/screens/recipe_screen.dart';
 
+/// Grid view of the recipes, required a list of Recipe objects, show an image of every recipe
 class RecipesGrid extends StatelessWidget {
   const RecipesGrid({super.key, required this.recipes});
   final List<Recipe> recipes;
