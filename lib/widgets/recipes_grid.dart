@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipes_practice/models/recipe_model.dart';
+import 'package:recipes_practice/screens/recipe_screen.dart';
 
 class RecipesGrid extends StatelessWidget {
   const RecipesGrid({super.key, required this.recipes});
@@ -16,7 +17,16 @@ class RecipesGrid extends StatelessWidget {
         for (Recipe recipe in recipes)
           AspectRatio(
             aspectRatio: 1,
-            child: Image.asset('assets/${recipe.image}', fit: BoxFit.cover),
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => RecipeScreen(recipe: recipe),
+                  ),
+                );
+              },
+              child: Image.asset('assets/${recipe.image}', fit: BoxFit.cover),
+            ),
           ),
       ],
     );
