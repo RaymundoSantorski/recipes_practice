@@ -11,20 +11,28 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:recipes_practice/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('App displays recipe list', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that our app shows a list when first open
+    expect(find.byType(Container), findsOne);
+    expect(find.byType(GridView), findsNothing);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // Tap the grid icon and trigger a frame
+    await tester.tap(find.byType(IconButton));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that the grid shows after tapping the icon
+    expect(find.byType(GridView), findsOne);
+    expect(find.byType(ListView), findsNothing);
+
+    // Tap one grid item and trigger a frame
+    await tester.tap(find.byKey(Key('1')));
+    await tester.pumpAndSettle();
+
+    // Verify that the app navigates to the recipe screen
+    expect(find.byType(Divider), findsOne);
+    expect(find.byType(GridView), findsNothing);
   });
 }
