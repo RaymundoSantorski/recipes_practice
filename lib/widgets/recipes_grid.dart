@@ -17,9 +17,9 @@ class RecipesGrid extends StatelessWidget {
       children: [
         for (Recipe recipe in recipes)
           AspectRatio(
-            key: Key('${recipe.id}'),
             aspectRatio: 1,
             child: InkWell(
+              key: Key('recipe_${recipe.id}'),
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
